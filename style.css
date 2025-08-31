@@ -1,12 +1,20 @@
-body {
+/* Reset + background */
+html, body {
+  height: 100%;
   margin: 0;
-  padding: 0;
-  background-image:url(college.jpg);
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background-image: url(college.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   font-family: Arial, sans-serif;
 }
 
+/* Header */
 .image-header {
   color: black;
   background-color: rgb(64, 18, 216);
@@ -33,6 +41,7 @@ body {
   margin-bottom: 5px;
 }
 
+/* Navigation */
 .nav {
   list-style: none;
   margin: 0;
@@ -59,7 +68,7 @@ body {
   position: absolute;
   top: 100%;                   
   left: 0;
-  background-color:  rgb(93, 48, 240);
+  background-color: rgb(93, 48, 240);
   min-width: 180px;
   list-style: none;
   padding: 0;
@@ -83,13 +92,28 @@ body {
   display: block;
 }
 
+/* Content box */
+.wrapper {
+  flex: 1;  /* Pushes footer to bottom */
+  width: 45%;          
+  margin-left: auto;       
+  margin-right: 20px;      
+  background: transparent; 
+  border: 2px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(10px); 
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  color: black;
+  border-radius: 20px;
+  padding: 30px 40px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+/* Footer */
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
   background-color: black;
   color: white;
+  text-align: center;
   padding: 15px 0;
 }
 
@@ -110,18 +134,19 @@ body {
   color: #ccc;
 }
 
-.page a{
-  color:white;
-  text-decoration:none;
-}
-.dropdown-content a{
-  color:rgb(5, 5, 5);
+/* Links */
+.page a {
+  color: white;
   text-decoration: none;
 }
-.home a{
-  color:white;
+.dropdown-content a {
+  color: rgb(5, 5, 5);
   text-decoration: none;
 }
-.home a:hover{
-  color:black;
+.home a {
+  color: white;
+  text-decoration: none;
+}
+.home a:hover {
+  color: black;
 }
